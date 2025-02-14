@@ -92,22 +92,37 @@ There will be three modules in the product: the Reader Service, the Identifier S
 \subsection{Assumptions and Dependencies}
 \label{sub:assumptions_and_dependencies}
 % Begin SubSection
-\begin{itemize}
-	\item List any assumptions you made in interpreting what the software being developed is aiming to achieve
-	\item List any other assumptions you made that, if it fails to hold, could require you to change the requirements
-	%\item List each of the factors that affect the requirements stated in the SRS
-	%\item These factors are not design constraints on the software but are, rather, any changes to them that can affect the requirements in the SRS
-	\begin{itemize}
-		\item \textbf{Example}: An assumption may be that a specific operating system will be available on the hardware designated for the software product. If, in fact, the operating system is not available, the SRS would then have to change accordingly.
-	\end{itemize}
-\end{itemize}
+\begin{enumerate}[1.]
+	\item Assumes that the language being identified exists
+	\item Assumes that the user using the application has basic technology experience
+	\item Assumes that the input from the user is legible and clear
+	\item Assumes that the user has a smartphone with a functioning camera
+	\item Assumes that the user has an up-to-date operating system to run the application
+	\item Assumes that the user is satisfied with the application identifying a broader language category and not a specific dialect of a language
+	\item Assumes that the APIs are fully functional when the application is in operation
+	\item Assumes that the APIs are safe and secure to use
+\end{enumerate}
 % End SubSection
+
+
+
 
 \subsection{Apportioning of Requirements}
 \label{sub:apportioning_of_requirements}
 % Begin SubSection
 \begin{itemize}
-	\item Identify requirements that may be delayed until future versions of the system
+	\item Further Language Support
+	\begin{itemize}
+		\item The application will only be developed in English for the first version of the application.
+	\end{itemize}
+	\item Further Language Identification
+	\begin{itemize}
+		\item In future versions, the application will be able to identify more languages with over 100 speakers.
+	\end{itemize}
+	\item Translator Feature
+	\begin{itemize}
+		\item In future versions, the application will incorporate a translator feature to be able to not only identify what the language is but translate what it is saying as well.
+	\end{itemize}
 \end{itemize}
 % End SubSection
 
