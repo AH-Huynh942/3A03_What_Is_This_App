@@ -1,58 +1,93 @@
 \section{Overall Product Description}
 \label{sec:overall_description}
-% Begin Section
-
-\begin{itemize}
-	\item This section should describe the general factors that affect the product and its requirements. 
-	\item It does not state specific requirements.
-	\item It provides a \emph{background} for those requirements and makes them easier to understand.
-\end{itemize}
 
 
 \subsection{Product Perspective}
 \label{sub:product_perspective}
 % Begin SubSection
-\begin{itemize}
-	\item Put the product into perspective with other related products, i.e., context
-	\item If the product is independent and totally self-contained, it should be stated here
-	\item If the SRS defines a product that is a component of a larger system, then this subsection should relate the requirements of that larger system to the functionality of the software being developed. Identify interfaces between that larger system and the software to be developed.
-	\item A block diagram showing the major components of the larger system, interconnections, and external interfaces can be helpful
-\end{itemize}
+There are a multitude of applications and websites for identifying languages based on text; however, the main product to compare to is Google Translate, 
+as it is widely used and has a built-in language detector. The main difference between the two products is that Google Translate is inherently a translator
+and the language detector is a non-functional feature. On the other hand, Languify does not have a translator feature, and functions primarily as a language identifier.
+It does have the additional unique feature of providing facts about the language as a summary, which is not provided by Google Translate. \\ \\
+Languify is not totally self-contained as it will be composed of multiple interacting systems. These components are the Expert Manager, the 3 Experts, 
+the Controller, Language Info, and Layout Rules. They are outlined in the graph below.
 % End SubSection
+
 
 \subsection{Product Functions}
 \label{sub:product_functions}
 % Begin SubSection
+There will be three modules in the product: the Reader Service, the Identifier Service, and the Facts Service.
+
+\begin{longtable}{p{0.5\linewidth} | p{0.5\linewidth}}
+\toprule
+\textbf{Modules} & \textbf{Functions} \\
+\midrule
+\endhead
+
+\textbf{Reader Service} & 
 \begin{itemize}
-	\item Provide a \emph{summary} of the major functions that the software will perform.
-	\begin{itemize}
-		\item \textbf{Example}: An SRS for an accounting program may use this part to address customer account maintenance, customer statement, and invoice preparation without mentioning the vast amount of detail that each of those functions requires.
-	\end{itemize}
-	\item Functions should be organized in a way that makes the list of functions understandable to the customer or to anyone else reading the document for the first time 
-	\item Present the functions in a list format - each item should be one function, with a brief description of it
-	\item Textual or graphical methods can be used to show the different functions and their relationships
-	\begin{itemize}
-		\item Such a diagram is not intended to show a design of a product, but simply shows the logical relationships among variables
-	\end{itemize} 
-\end{itemize}
+    \item \textbf{Read PDF} – Allows the user to input a PDF document containing the language they want to identify.
+    \item \textbf{Read Text} – Allows the user to input text of the language they want to identify.
+    \item \textbf{Read Photo} – Allows the user to input a photo of the language they want to identify.
+\end{itemize} \\
+
+\hline
+
+\textbf{Identifier Service} & 
+\begin{itemize}
+    \item \textbf{Identify Language} – Identifies the language that was inputted by the user.
+\end{itemize} \\
+
+
+\hline
+
+
+\textbf{Facts Service} & 
+\begin{itemize}
+    \item \textbf{List How Many Speakers} – Estimates the number of speakers of the identified language worldwide.
+    \item \textbf{Display Map} – Shows a world map highlighting regions where the identified language is most spoken.
+    \item \textbf{List Phrases} – Lists common phrases in the identified language along with pronunciation.
+    \item \textbf{Generate Facts} – Provides various details about the identified language.
+\end{itemize} \\
+\bottomrule
+\end{longtable}
+
+
+\begin{figure}[H]
+	\centering
+	% \includegraphics[width=\linewidth]{Example_Use_Case.png}
+	\includegraphics{Section2/State_Diagram.png}
+	\caption{State Diagram}
+	\label{{StateDiagram}}
+\end{figure}
 % End SubSection
+
 
 \subsection{User Characteristics}
 \label{sub:user_characteristics}
 % Begin SubSection
 \begin{itemize}
-	\item Describe those general characteristics of the intended users of the product including educational level, experience, and technical expertise 
-	\item Since there will be many users, you may wish to divide into different user types or personas
-%	\item Do not state specific requirements, but rather provide the reasons why certain specific requirements are later specified
+	\item \textbf{Experience}: with Application: The user may range anywhere from being a first-time user to having many experiences with the application.
+	\item \textbf{Experience}: with Technology: The user has at least one month of experience using a smartphone and can perform basic actions such as taking photos, selecting a file for upload, and typing into a text box.
+	\item \textbf{Education}: The user can read and write in English. They have a very basic knowledge about geography, world languages, and culture. 
+	\item \textbf{Age}: The user is at least 13 years old but is likely an older teen or adult.
+	\item \textbf{Physical}: Ability:  The user may be able-bodied or disabled.
+	\item \textbf{Location}: The user is likely located in a culturally diverse area, whether that is due to travel or residence.
+	\item \textbf{Personality}: The user is likely curious about other cultures and languages.
 \end{itemize}
+
 % End SubSection
 
 \subsection{Constraints}
 \label{sub:constraints}
 % Begin SubSection
 \begin{itemize}
-	\item Provide a general description of any constraints that will limit the developer's options
+	\item \textbf{Budget}: The budget is a significant constraint on the developers' options. There are costly APIs, design tools, and hosting infrastructure that can either significantly improve the quality of the product or streamline its development. Since this is a school project, the allotted budget is \textdollar 0, which leaves these products unavailable to developers. [4]
+	\item \textbf{Time}: The product must be completed by the end of the term, which is in just a little over 2 months. This short timeframe means that the product will have limited features and possibly limited functionality.
+	\item \textbf{Platform}: The product must be a mobile application designed for Android Operating System. This constrains the developer to make an application layout that fits the dimensions of smartphones. The functions of the application must be limited to ones that are available for the Android Operating System and mobile devices. Finally, the size of the application must fit within the phone's memory.
 \end{itemize}
+
 % End SubSection
 
 \subsection{Assumptions and Dependencies}
