@@ -5,3 +5,10 @@
 *.log
 *.fls
 *.synctex.gz
+*.bbl
+*.bbl*
+*.bcf
+*.bcf*
+*.blg
+*.xml
+*.bbl
