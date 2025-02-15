@@ -71,7 +71,7 @@
 \label{ssub:learning_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{UH-L}1. ]
-	\item UH-L1. The user should be able to figure out how to use the application for the first time without any instruction within 5 minutes.
+	\item The user should be able to figure out how to use the application for the first time without any instruction within 5 minutes.
 	\\ \textbf{Rationale}: If the user must spend more than 5 minutes trying to figure out the application or must read a long instruction manual to figure out how to use the application, the user will then become frustrated and abandon the application. This would then discourage the user for ever using the application in the future when they would be frustrated every time they try to use the application.	
 \end{enumerate}
 % End SubSubSection
@@ -197,16 +197,15 @@
 \label{ssub:expected_physical_environment}
 % Begin SubSubSection
 \begin{enumerate}[{OE-EPE}1. ]
-	\item The system must be compatible with ARM architecture paired with both android and iOS operating systems.\\ \textbf{Rationale}: Each expert must interact with the central database to reference their respective data stores, and obtain necessary language information. A max latency of 1 second ensures fast communication between both parties so that the language is deduced in a sensible time. 
-	\item The system must be able to send JPEG, HEIC, and PNG images of up to 100MB to a computer vision API, and receive information without disruption.
-	\\ \textbf{Rationale}: Phones that use iOS (iPhone) store images in HEIC or JPEG by default. Phones that use Android operating systems most commonly store them in JPEG and PNG [3]. Image sizes of up to 100MB ensure high-quality pictures are transferable between the system and API.  
+	\item The system must be compatible with ARM architecture paired with both android and iOS operating systems.
+	\\ \textbf{Rationale}: Each expert must interact with the central database to reference their respective data stores, and obtain necessary language information. A max latency of 1 second ensures fast communication between both parties so that the language is deduced in a sensible time. 
 \end{enumerate}
 % End SubSubSection
 
 \subsubsection{Requirements for Interfacing with Adjacent Systems}
 \label{ssub:requirements_for_interfacing_with_adjacent_systems}
 % Begin SubSubSection
-\begin{enumerate}[{OE-IA}1. ]
+\begin{enumerate}[{OE-IA}1.]
 	\item The system must perform two-way communication with a cloud database in at most 1 second.
 	\textbf{Rationale}: Each expert must interact with the central database to reference their respective data stores, and obtain necessary language information. A max latency of 1 second ensures fast communication between both parties so that the language is deduced in a sensible time.   
 	\item The system must be able to send JPEG, HEIC, and PNG images of up to 100MB to a computer vision API, and receive information without disruption.
