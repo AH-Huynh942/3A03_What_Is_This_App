@@ -9,33 +9,37 @@
 						\item User taps the button to identify the language.
 							\item System prompts user for input.
 							\item User chooses type of input.
-							\item User uploads the input onto the app (see BE2 for more details).
+							\item User uploads the input onto the app (see Uploading BE for more details).
 							\item System interprets the input.
 							\item System outputs the most correct language.
 					\end{enumerate}
-				
-					\textbf{Secondary Scenario:} System failed to identify language \\
-					\textbf{7.i.} System is unable to identify the language with 80\% certainty.\\
-					\textbf{7.i.1.} System is unable to provide an 80\% accurate answer. \\
-					\textbf{7.i.2.} System asks the user for more input (proceed to step 8 or 9).
+					\textbf{Secondary Scenario:} System failed to identify language
+					\begin{enumerate}[{\bf 7.}i.]
+						\item  System is unable to identify the language with 80\% certainty
+						\item System is unable to provide an 80\% accurate answer.
+						\item System asks the user for more input (proceed to step 8 or 9)
+					\end{enumerate}
+					% \textbf{7.i.} System is unable to identify the language with 80\% certainty.\\
+					% \textbf{7.i.1.} System is unable to provide an 80\% accurate answer. \\
+					% \textbf{7.i.2.} System asks the user for more input (proceed to step 8 or 9).
 					
-					\textbf{8.} User accepts to give more input.
-					\begin{enumerate}[{\bf 8.1.}]
+					% \textbf{8.} User accepts to give more input.
+					\begin{enumerate}[{\bf 8.}i.]
+						\item User accepts to give more input.
 						\item Return and repeat steps 4 to 7.
 					\end{enumerate}
-					\textbf{9.} User declines to give more input.
-					\begin{enumerate}[{\bf 9.1.}]
-						\item System outputs the most correct answer, but with a notice of less than 80\% certainty.
+					\begin{enumerate}[{\bf 9}i.]
+						\item User declines to give more input.
+						\item System outputs the most correct answer, but with a notice of less than 80\% certainty. and asks to provide feedback
 					\end{enumerate}
-					\textbf{Post-Condition}:
-					\\ User is familiarized with the language 
+					\textbf{Post-Condition}: User is familiarized with the language 
 			\item Administrators - \textbf{N/A}
 			\item Linguistic Enthusiasts - \textbf{N/A}
 			\item Language Translator Companies - \textbf{N/A}
 		\end{enumerate}
 	\textbf{Global Scenario}:
-	\\ \textbf{Precondition}: User is unfamiliar with the langiage when browsing his/her device and decides to copy and paste said text into the app
-	\\ \textbf{Main Success Scenario}:
+	% \\ \textbf{Precondition}: User is unfamiliar with the langiage when browsing his/her device and decides to copy and paste said text into the app
+	% \\ \textbf{Main Success Scenario}:
 	\begin{enumerate}[{\bf 1.}]
 		\item User enters the app
 		\item User taps the button identify Language
@@ -46,12 +50,17 @@
 		\item System outputs the most correct language
 	\end{enumerate}
 	\textbf{Secondary Scenario}: System failed to identify the language
-	\begin{enumerate}[{\bf 7.i.}]
-		\item System asks for more input from the user
-		\item User accepts to give more input
-		\item Return and Repeat Steps 4-7
+	\begin{enumerate}[{\bf 7.}i.]
+		\item  System is unable to identify the language with 80\% certainty
+		\item System is unable to provide an 80\% accurate answer.
+		\item System asks the user for more input (proceed to step 8 or 9)
 	\end{enumerate}
-	\begin{enumerate}[{\bf 7.ii.}]
-		\item User declines to give more input
+	\begin{enumerate}[{\bf 8.}i.]
+		\item User accepts to give more input.
+		\item Return and repeat steps 4 to 7.
+	\end{enumerate}
+	\begin{enumerate}[{\bf 9}i.]
+		\item User declines to give more input.
+		\item System outputs the most correct answer, but with a notice of less than 80\% certainty. and asks to provide feedback
 	\end{enumerate}
 	\textbf{Post-Condition}: User is familiarized with the language
