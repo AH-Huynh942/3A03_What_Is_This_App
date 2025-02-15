@@ -87,7 +87,7 @@
 \label{ssub:accessibility_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{UH-A}1. ]
-	\item The system should be able to switch colour settings between a normal colour palette to other colour palettes such as the Protan and Deutan colour palettes [], to accommodate people with colour blindness.
+	\item The system should be able to switch colour settings between a normal colour palette to other colour palettes such as the Protan and Deutan colour palettes \cite{EnChroma2025}, to accommodate people with colour blindness.
 	\\ \textbf{Rationale}: Users who are colourblind will then be able to differentiate between different parts of the application, but also be able to use the functionality of the application with more ease.
 	
 \end{enumerate}
@@ -137,7 +137,7 @@
 % Begin SubSubSection
 \begin{enumerate}[{PR-RA}1. ]
 	\item The system must have an availability of 99.9\% except for maintenance and Internet networks go down
-	\\ \textbf{Rationale}: The longer availability will make the app more competitive; it should have an availability of 99.9\% (three nines) as most of the application in the industry aim to have that percentage \cite{1}. That means app will have downtime of 8.76 hours per year for maintenance and other exception. This allows time for updating new expert in system and solve unexpected crash of system.
+	\\ \textbf{Rationale}: The longer availability will make the app more competitive; it should have an availability of 99.9\% (three nines) as most of the application in the industry aim to have that percentage \cite{Britannica2025_WritingSystems}. That means app will have downtime of 8.76 hours per year for maintenance and other exception. This allows time for updating new expert in system and solve unexpected crash of system.
 	\item The system must create backups of all the app data
 	\\ \textbf{Rationale}: In case some unexpected things happened, system could lose all the feedback and information from user, having a backup of that data will ensure us to recover our lost data.
 \end{enumerate}
@@ -193,7 +193,7 @@
 % Begin SubSubSection
 \begin{enumerate}[{OE-EPE}1. ]
 	\item The system must be compatible with ARM architecture paired with both android and iOS operating systems.
-	\\ \textbf{Rationale}: 99\% of smartphones use ARM architecture \cite{5}, with the listed operating systems holding over 99\% of the market share for mobile devices worldwide \cite{6}.
+	\\ \textbf{Rationale}: 99\% of smartphones use ARM architecture \cite{ARM2025}, with the listed operating systems holding over 99\% of the market share for mobile devices worldwide \cite{Backlinko2025}.
 \end{enumerate}
 % End SubSubSection
 
@@ -204,7 +204,7 @@
 	\item The system must perform two-way communication with a cloud database in at most 1 second.
 	\textbf{Rationale}: Each expert must interact with the central database to reference their respective data stores, and obtain necessary language information. A max latency of 1 second ensures fast communication between both parties so that the language is deduced in a sensible time.   
 	\item The system must be able to send JPEG, HEIC, and PNG images of up to 100MB to a computer vision API, and receive information without disruption.
-	\\ \textbf{Rationale}: Phones that use iOS (iPhone) store images in HEIC or JPEG by default. Phones that use Android operating systems most commonly store them in JPEG and PNG \cite{7}. Image sizes of up to 100MB ensure high quality pictures are transferable between the system and API.
+	\\ \textbf{Rationale}: Phones that use iOS (iPhone) store images in HEIC or JPEG by default. Phones that use Android operating systems most commonly store them in JPEG and PNG \cite{Android2025}. Image sizes of up to 100MB ensure high quality pictures are transferable between the system and API.
 	\item The system must be able to dynamically send country names and receive a corresponding photo from an image generator API.
 	\\ \textbf{Rationale}: The innovative feature requires that images must be able to dynamically produce a map highlighting countries with prominent speakers for certain languages.
 \end{enumerate}
@@ -224,11 +224,11 @@
 % Begin SubSubSection
 \begin{enumerate}[{OE-R}1. ]
 	\item The system must be compatible with Android 12.0, iOS 18.0, or above.
-	\\ \textbf{Rationale}: Both iOS and android operating systems are used by the app, and these are their last versions that receive active maintenance and security support \cite{8,9}. 
+	\\ \textbf{Rationale}: Both iOS and android operating systems are used by the app, and these are their last versions that receive active maintenance and security support \cite{EndOfLife2025_Android,EndOfLife2025_iOS}. 
 	\item The deployed system must have a maximum downtime or 1 hour per 2 weeks.
 	\\ \textbf{Rationale}: The product must be available to use for as long as possible, and 1 hour per week leaves sufficient time to deploy maintenance updates and bug fixing.
 	\item The system must only be accessible for users with a network connection of at least 2 Mb/s.
-	\\ \textbf{Rationale}: To guarantee all API and database communication functions as expected, a stable network connection is necessary. These calls apply a load comparable to those made when browsing the web, where a speed of 2-5 Mb/s is satisfactory \cite{10}.
+	\\ \textbf{Rationale}: To guarantee all API and database communication functions as expected, a stable network connection is necessary. These calls apply a load comparable to those made when browsing the web, where a speed of 2-5 Mb/s is satisfactory \cite{Speedtest2025}.
 \end{enumerate}
 % End SubSubSection
 
@@ -356,11 +356,11 @@
 % Begin SubSubSection
 \begin{enumerate}[{LR-COMP}1. ]
 	\item The system must convey that all images passed into the system are to be analyzed by computer vision algorithms prior to any collection.
-	\\ \textbf{Rationale}: Based on PIPEDA Principle 2, the purpose of collected data must be specified by the organization before or during the time of collection \cite{11}. All apps launched in Canada must comply with PIPEDA regulations.
+	\\ \textbf{Rationale}: Based on PIPEDA Principle 2, the purpose of collected data must be specified by the organization before or during the time of collection \cite{PIPEDA2025}. All apps launched in Canada must comply with PIPEDA regulations.
 	\item All images processed with computer vision algorithms must ensure that only text is extracted and analyzed.
-	\\ \textbf{Rationale}: Based on PIPEDA Principle 4, only data that is necessary for the system is collected \cite{11}. So, any other visible artifacts including, but not limited to addresses, signatures and people cannot be analyzed.
+	\\ \textbf{Rationale}: Based on PIPEDA Principle 4, only data that is necessary for the system is collected \cite{PIPEDA2025}. So, any other visible artifacts including, but not limited to addresses, signatures and people cannot be analyzed.
 	\item Collected images are discarded upon analysis of the text. The text is also discarded when the user prompts to close the window.
-	\\ \textbf{Rationale}: Based on ISO 27001, data must be encrypted when it is being transmitted between parties to prevent leakage of any IP addresses and other personal data \cite{8}.
+	\\ \textbf{Rationale}: Based on ISO 27001, data must be encrypted when it is being transmitted between parties to prevent leakage of any IP addresses and other personal data \cite{ISMS2025}.
 \end{enumerate}
 % End SubSubSection
 
@@ -369,13 +369,13 @@
 % Begin SubSubSection
 \begin{enumerate}[{LR-STD}1. ]
 	\item The system must ensure that text is resizable, and that the interface’s colour contrast satisfies the Web Content Accessibility Guidelines.
-	\\ \textbf{Rationale}: This is a key standard outlined in the AODA, which applies to Languify as it is developed and released in Ontario \cite{10}.
+	\\ \textbf{Rationale}: This is a key standard outlined in the AODA, which applies to Languify as it is developed and released in Ontario \cite{Speedtest2025}.
 	\item The system shall offer a virtual keyboard for each supported script, which is controllable with the physical keyboard’s arrow keys. Each screen must be fully navigable with the physical keyboard as well.
-	\\ \textbf{Rationale}: As per the AODA, systems must be navigable without a mouse to be considered operable \cite{10}. This also ensures it is usable under any conditions.
+	\\ \textbf{Rationale}: As per the AODA, systems must be navigable without a mouse to be considered operable \cite{Speedtest2025}. This also ensures it is usable under any conditions.
 	\item The system shall provide clearly labelled buttons, input modules, and instructions for every functionality.
-	\\ \textbf{Rationale}: As per the AODA, systems must be understandable, with unambiguous wording and input assistance to make them as easy to use as possible \cite{9}.
+	\\ \textbf{Rationale}: As per the AODA, systems must be understandable, with unambiguous wording and input assistance to make them as easy to use as possible \cite{AODA2025}.
 	\item The system must be compatible with screen readers and provide alternative text when needed.
-	\\ \textbf{Rationale}: As per the AODA, it is crucial to follow proper coding standards and semantics so that they are accessible to as many audiences as possible \cite{9}.
+	\\ \textbf{Rationale}: As per the AODA, it is crucial to follow proper coding standards and semantics so that they are accessible to as many audiences as possible \cite{AODA2025}.
 \end{enumerate}
 % End SubSubSection
 
