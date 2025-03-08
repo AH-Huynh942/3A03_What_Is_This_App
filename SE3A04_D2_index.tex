@@ -18,6 +18,8 @@
 \usepackage{longtable}
 \usepackage{booktabs}
 \usepackage{float}
+\usepackage{tikz,lipsum,lmodern}
+\usepackage[most]{tcolorbox}
 % \usepackage{biblatex}
 \usepackage[backend=biber,style=ieee]{biblatex} % Ensure 'style=ieee' is set
 \addbibresource{references.bib} % Add your bibliography file
@@ -32,7 +34,7 @@
 
 % Title Details
 %------------------------------------------------------------------------------
-\title{Deliverable \#2: High-Level Architectural Design (\textbf{SRS})}
+\title{Deliverable \#2: High-Level Architectural Design}
 \author{SE 3A04: Software Design II -- Large System Design}
 \date{}
                             
@@ -57,26 +59,19 @@
 \newpage
 
 % SECTION 1 
-% \include{Section1/1Introduction}
+\include{Section1/1Introduction}
 
 
 % SECTION 2
-% \include{Section2/2OveralProductDescription}
+\include{Section2/2AnalysisClassDiagram}
 
 
 % SECTION 3
-% \include{Section3/3UseCaseDiagram}
+\include{Section3/3ArchitecturalDesign}
 
 
 % SECTION 4
-% \include{Section4/4FunctionRequirements}
-
-
-% SECTION 5
-% \include{Section5/5NonFunctionRequirements}
-
-% SECTION 6
-% \include{Section6/6InnovativeFeatures}
+\include{Section4/4ClassResponsibilityCards}
 
 
 % DIVISION OF LABOR
