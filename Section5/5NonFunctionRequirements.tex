@@ -12,14 +12,14 @@
 \label{ssub:appearance_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{LF-A}1. ]
-	\item The application shall have a simple design.
+	\item The application shall \textcolor{red}{not have more than 5 elements on the screen at a time.}
 	\\ \textbf{Rationale}: A simple design helps keep users from getting overwhelmed. It will also help keep users focused on the 
 	functions of the application rather than the design.
-	\item The application should have text that is easily legible.
-	\\ \textbf{Rationale}: Legible text contributes to ease of use and the opposite may frustrate users.
-	\item The application shall have large input boxes and text boxes.
-	\\ \textbf{Rationale}: There is a wide array of inputs the user may add. This allows for the user to make sure his/her inputs are correct and accurate.
-	\item The application shall have a simple colour palette that prevents colour-blind inaccessibility.
+	\item The application should \textcolor{red}{use atleast 20pt and 16pt font for headings and body text respectively, ensuring all }text is easily legible.
+	\\ \textbf{Rationale}: Easily legible text contributes to ease of use and the opposite may frustrate users.
+	\item The application's text boxes must \textcolor{red}{dynamically create new lines when one is full, with each large enough to contain atleast 30 16pt characters on mobile, and 200 16pt characters on desktop. Other input fields for images and PDFs must be at least 150x150 pixels as well.}
+	\\ \textbf{Rationale}: There is a wide array of inputs the user may add. Large boxes allow for the user to make sure his/her inputs are correct and accurate.
+	\item The application shall have a \textcolor{red}{consistent monochromatic} colour palette that prevents colour-blind inaccessibility.
 	\\ \textbf{Rationale}: Not having accessibility aspects for the application will prevent a minority of the population from utilizing and testing the app.  
 \end{enumerate}
 % End SubSubSection
@@ -56,7 +56,7 @@
 \label{ssub:personalization_and_internationalization_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{UH-PI}1. ]
-	\item The system shall allow the user to select the preferred language used within the application.
+	\item The system shall allow the user to select their preferred language used within the application \textcolor{red}{from the list outlined in 2.6}.
 	\\ \textbf{Rationale}: Users would then be able to navigate and have a better overall experience with the application when they are able to understand it more easily. Thus, this would then encourage the user to continue using the application in the future.
 	\item The system shall allow the user to customize what phrases of the identified language are given to them.
 	\\ \textbf{Rationale}: Users would then find more enjoyment while using the application when they can tailor what they want to learn how to say in the language being identified.
@@ -68,7 +68,7 @@
 \label{ssub:learning_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{UH-L}1. ]
-	\item The user should be able to figure out how to use the application for the first time without any instruction within 5 minutes.
+	\item \textcolor{red}{Non-technical beginner} users should be able to figure out how to use the application for the first time without any instruction within 5 minutes.
 	\\ \textbf{Rationale}: If the user must spend more then 5 minutes trying to figure out the application or must read a long instruction manual to figure out how to use the application, the user will then become frustrated and abandon the application. This would then discourage the user for ever using the application in the future when they would be frustrated every time they try to use the application.	
 \end{enumerate}
 % End SubSubSection
@@ -125,7 +125,7 @@
 \label{ssub:precision_or_accuracy_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR-PA}1. ]
-	\item The app must show the most precise result of identification.
+	\item The app must show the most precise result of identification\textcolor{red}{, with at least 80\% surety.}
 	\\ \textbf{Rationale}: The accuracy of the result from the system is dependent on the quality of the input. The system will sometimes make errors when there is a lack of information.
 	\item The average rating of the app must be accurate to one decimal place.
 	\\ \textbf{Rationale}: To keep the UI simple for rating, our app would only allow users to submit a rating with a max of one decimal place. This is followed by other apps in the industry. 
@@ -138,7 +138,7 @@
 \begin{enumerate}[{PR-RA}1. ]
 	\item The system must be available for 99.9\% of the time, excluding maintenance time and internet network outages.
 	\\ \textbf{Rationale}: The longer availability will make the app more competitive. It should have an availability of 99.9\% (three nines) as most of the applications in the industry aim to achieve this \cite{Britannica2025_WritingSystems}. That means the app will only have a downtime of 8.76 hours per year for maintenance and other exceptions. This allows time for adding new \textbf{experts} within the system and solving unexpected crashs/bugs within the system.
-	\item The system must create backups of all the app data.
+	\item The system must create \textcolor{red}{weekly} backups of all the app data.
 	\\ \textbf{Rationale}: If something unexpected happens, the system could lose all the feedback and information gained from the users. Having a backup of this data will ensure that we are able to recover our lost data if this happens.
 \end{enumerate}
 % End SubSubSection
@@ -170,6 +170,8 @@
 \begin{enumerate}[{PR-SE}1. ]
 	\item The code for the system must be open for addition, but closed for modification.
 	\\ \textbf{Rationale}: By applying this principle, it ensures stability and consistency (close to modification) and maximizes the scalability and extensibility as well.
+	\textcolor{red}{\item Adding support for new languages must be implementable by configuring at most one interface.
+	\\ \textbf{Rationale}: When new \textbf{experts} are to be added, preexisting code should not have to be modified to accomodate them. This limit ensures they can be added while maintaining low coupling.}
 \end{enumerate}
 % End SubSubSection
 
@@ -242,7 +244,7 @@
 \label{ssub:maintenance_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{MS-M}1. ]
-	\item The system must have a minimum number of monthly software updates to patch bugs in the software.  
+	\item The system must have a minimum number of \textcolor{red}{2} monthly software updates to patch bugs in the software.  
 	\\ \textbf{Rationale}: This ensures the system runs smoothly and that bugs gets patched and fixed regularly. This will help to maintain 	good app quality throughout its use.
 	\item The system must have a minimum of three times per year to expand and update language libraries. 
 	\\ \textbf{Rationale}: This ensures the new created slangs and words are added into the library to help identify the language.
@@ -296,7 +298,7 @@
 \label{ssub:privacy_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{SR-P}1. ]
-	\item The app must ensure the confidentiality of user input. 
+	\item The app must ensure the confidentiality of user input \textcolor{red}{through appropriate encryption and access control policies}. 
 	\\ \textbf{Rationale}: Input from the user used to identify the language should not be leaked to anyone.
 \end{enumerate}
 % End SubSubSection
@@ -315,7 +317,7 @@
 \label{ssub:immunity_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{SR-IM}1. ]
-	\item The system must not accept unexpected input.
+	\item The system must not accept inputs \textcolor{red}{deviating from the expected photo, PDF, or plain text inputs}.
 	\\ \textbf{Rationale}: This is to prevent attacks like SQL Injection.
 \end{enumerate}
 % End SubSubSection
@@ -355,11 +357,13 @@
 \label{ssub:compliance_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{LR-COMP}1. ]
-	\item The system must convey that all images passed into the system are to be analyzed by computer vision algorithms prior to any collection.
+	\item The system must convey \textcolor{red}{to users} that all images passed into the system are to be analyzed by computer vision algorithms prior to any collection.
 	\\ \textbf{Rationale}: Based on \textbf{PIPEDA} Principle 2, the purpose of collected data must be specified by the organization before or during the time of collection \cite{PIPEDA2025}. All apps launched in Canada must comply with \textbf{PIPEDA} regulations.
 	\item All images processed with computer vision algorithms must ensure that only text is extracted and analyzed.
 	\\ \textbf{Rationale}: Based on \textbf{PIPEDA} Principle 4, only data that is necessary for the system is collected \cite{PIPEDA2025}. So, any other visible artifacts including (but not limited to) addresses, signatures, and people cannot be analyzed.
 	\item Collected images are discarded upon analysis of the text. The text is also discarded when the user prompts to close the window.
+	\textcolor{red}{\\ \textbf{Rationale}: Based on \textbf{PIPEDA} Principle 5, data must only be kept as long as needed to serve its purposes \cite{PIPEDA2025}.
+	\item All network communication must be TLS encrypted.}
 	\\ \textbf{Rationale}: Based on \textbf{ISO} 27001, data must be encrypted when it is being transmitted between parties to prevent leakage of any IP addresses and other personal data \cite{ISMS2025}.
 \end{enumerate}
 % End SubSubSection
@@ -374,7 +378,7 @@
 	\\ \textbf{Rationale}: As per the \textbf{AODA}, systems must be navigable without a mouse to be considered operable \cite{Speedtest2025}. This also ensures it is usable under any conditions.
 	\item The system shall provide clearly labelled buttons, input modules, and instructions for every functionality.
 	\\ \textbf{Rationale}: As per the \textbf{AODA}, systems must be understandable, with unambiguous wording and input assistance to make them as easy to use as possible \cite{AODA2025}.
-	\item The system must be compatible with screen readers and provide alternative text when needed.
+	\item The system must be compatible with screen readers and provide alternative text \textcolor{red}{for all images, graphs, and non-text elements}.
 	\\ \textbf{Rationale}: As per the \textbf{AODA}, it is crucial to follow proper coding standards and semantics so that they are accessible to as many audiences as possible \cite{AODA2025}.
 \end{enumerate}
 % End SubSubSection
