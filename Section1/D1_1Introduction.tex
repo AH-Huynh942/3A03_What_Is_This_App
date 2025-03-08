@@ -1,0 +1,61 @@
+\section{Introduction}
+\label{sec:introduction}
+% Begin Section
+
+
+\subsection{Purpose}
+\label{sub:purpose}
+% Begin SubSection
+The purpose of the \textbf{SRS} is to serve as an outline of \textbf{Languify} for the developers, clients, and other stakeholders. It provides these stakeholders with a broad understanding of the requirements and design considerations. Section 1 establishes the scope of the product and defines any terms or references that will be mentioned in the rest of the document.
+% End SubSection
+
+
+\subsection{Scope}
+\label{sub:scope}
+% Begin SubSection
+The product is a mobile app called \textbf{Languify} that takes an input from the user and identifies the language. 
+A User Interface (\textbf{UI}) takes in a written text input in the form of a PDF document, image, or typed text. 
+The input is then sent to a backend server called the Expert Manager that communicates with 3 different \textbf{experts} who specify what language they believe the input is. 
+The \textbf{UI} will interact with the Controller, which interacts with two components.
+These components are the data structure Language Info, which stores facts about different languages, and Layout Rules, which acts as a knowledge source on how to lay out the data.\\ \\
+The \textbf{experts} are skilled at specific scripts or categories of script and identifying languages from those groups. The first expert identifies languages that use the Latin script, such as English and German. 
+The second expert specifies in languages that use the Arabic script, such as Arabic and Urdu \cite{Britannica2025_WritingSystems}. The third expert specializes in languages that have a unique script, such as Korean which is the only widely spoken language that uses Hangul \cite{Britannica2025_Hangul}. \\ \\
+The product only identifies languages that use Latin, Arabic, and unique scripts. It will only identify the 100 most spoken languages \cite{Ethnologue2025}. It does not distinguish between different dialects. \textit{As an innovative feature, the app displays some general information about the identified language, such as the number of speakers and some common phrases}.\\ \\
+The application is useful for people who are frequently exposed to languages they do not know. This is primarily for people who live in diverse regions or travellers. It is great for those who are curious about other cultures and may want to know some basic information to use. It encourages this curiosity and allows users to connect across cultural barriers. The overall goal is to make this product as accessible as possible.
+% End SubSection
+
+
+\subsection{Definitions, Acronyms, and Abbreviations}
+\label{sub:definitions_acronyms_and_abbreviations}
+% Begin SubSection
+\begin{itemize}
+	\item \textbf{Agents/Experts} – Knowledge sources that help validate the correct language
+	\item \textbf{AODA} – Accessibility for Ontarians with Disabilities Act
+	\item \textbf{API} – Application Programming Interface
+	\item \textbf{ISO} – International Organization for Standardization
+	\item \textbf{Languify} – The name of the application that users shall recognize.
+	\item \textbf{MVP} – The minimal viable product, which is a basic and usable version of the product. 
+	\item \textbf{PIPEDA} – Personal Information Protection and Electronic Documents Act
+	\item \textbf{SRS} – The software requirements specification, which is this document.
+	\item \textbf{UI} - User Interface that lets the user interact and communicate to the system application.
+\end{itemize}
+% End SubSection
+
+
+\subsection{References}
+\label{sub:references}
+% Begin SubSection
+% \begin{itemize}
+\printbibliography[heading=none]
+% \bibliographystyle{IEEEtran}
+% \bibliography{references}
+% End SubSection
+
+
+\subsection{Overview}
+\label{sub:overview}
+% Begin SubSection
+The remainder of this document delves into further details about the requirements specification. Section 2 is the overall product description and provides users with a general understanding of this product. This section discusses the product perspective, product functions, user characteristics, constraints, assumptions and dependencies, and apportioning of requirements. Section 3 provides a use case diagram that demonstrates how users will interact with the application. Section 4 supplements Section 3 by going into detail about functional requirements. This section also details all the main business events and viewpoints. Finally, Section 5 lists non-functional requirements and justifies their inclusion.
+% End SubSection
+
+% End Section
