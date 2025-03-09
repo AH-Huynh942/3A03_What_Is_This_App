@@ -1,26 +1,27 @@
 \section{Introduction}
 \label{sec:introduction}
 % Begin Section
-dfsafdkj;slafhdks;..;ahf;sdklahf;ldsa
 
 \subsection{Purpose}
 \label{sub:purpose}
 % Begin SubSection
-blah...ahdsafdaslfhdsklahdsafdaslfhdsklahdsafdaslfhdsklahdsafdaslfhdsklahdsafdaslfhdsklahdsafdaslfhdsklahdsafdaslfhdskl
+This document provides an overview of Languify’s high-level architectural structure by discussing design decisions for its overarching and subsystem architectures. It also delves deeper into the different classes within the design, and how they interact leading up to a successful language identification. 
+This document is intended for the internal stakeholders such as the software developers, and project managers. For a broader overview that gives the external stakeholders (e.g. users, clients) a clearer non-technical understanding, refer to the first deliverable.
+
 % End SubSection
 
 
 \subsection{System Description}
 \label{sub:system_description}
 % Begin SubSection
-blah...ahdsafdaslfhdsblah...ahdsafdaslfhdsblah...ahdsafdaslfhdsblah...ahdsafdaslfhds
+The overall system follows a Pipe and Filter architecture, with three subsystems, each having its own architectural style. The Identifier subsystem is structured using a Blackboard architecture because it contains passive agents that communicate with an active data store. The Reader subsystem follows a Pipe and Filter architecture since it processes the user input step by step to ensure compatibility with the Identifier subsystem. The Display subsystem follows a Repository architecture, as it retrieves data from a data store that supplements language detection by providing interesting facts related to the identified language.
 % End SubSection
 
 
 \subsection{Overview}
 \label{sub:overview}
 % Begin SubSection
-blah...ahdsafdaslfhdsblah...ahdsafdaslfhdsblah...ahdsafdaslfhdsblah...ahdsafdaslfhds
+Section 2 introduces an Analysis Class Diagram for the Languify application. Section 3 outlines the High-Level System Design by justifying its overarching architecture, those of its subsystems, and considered alternatives. Finally, Section 4 showcases Class Responsibility Collaboration (CRC) Cards that elaborate on classes, responsibilities, and interactions highlighted in the analysis class diagram.
 % End SubSection
 
 
