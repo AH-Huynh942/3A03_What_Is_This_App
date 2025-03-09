@@ -13,7 +13,7 @@ blah...ahdsafdaslfhdsklahdsafdaslfhdsklahdsafdaslfhdsklahdsafdaslfhdsklahdsafdas
 \subsection{System Description}
 \label{sub:system_description}
 % Begin SubSection
-blah...ahdsafdaslfhdsblah...ahdsafdaslfhdsblah...ahdsafdaslfhdsblah...ahdsafdaslfhds
+The overall system follows a Pipe and Filter architecture, with three subsystems, each having its own architectural style. The Identifier subsystem is structured using a Blackboard architecture because it contains passive agents that communicate with an active data store. The Reader subsystem follows a Pipe and Filter architecture since it processes the user input step by step to ensure compatibility with the Identifier subsystem. The Display subsystem follows a Repository architecture, as it retrieves data from a data store that supplements language detection by providing interesting facts related to the identified language.
 % End SubSection
 
 
