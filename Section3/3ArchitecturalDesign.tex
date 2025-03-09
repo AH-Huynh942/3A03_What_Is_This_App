@@ -5,64 +5,28 @@
 \subsection{System Architecture}
 \label{sub:system_architecture}
 % Begin SubSection
-The overall architecture of our design follows the Pipe and Filter architecture. This serves as the overarching architecture composing of three subsystems with their own architectures, as shown in the table below.
+The overall architecture of our design follows the Pipe and Filter architecture. This serves as the overarching architecture composing of three subsystems with their own architectures, as shown in the Table 1.
 
 \begin{table}[h]
     \centering
-    \begin{tabularx}{\linewidth}{|X|X|X|}
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|c|p{8cm}|c|}
         \hline
-        Subsystem & Purpose & Architectural Style \\ \hline
-        Reader & 
-        Reads the input from the user and converts it into the
-        proper file format for the 
-        Identifier subsystem
-        & Pipe and Filter \\ \hline
-        Identifier
-        &
-        Identifies the language 
-        using the input from the 
-        Reader subsystem
-        &
-        Blackboard \\ \hline
-        \centering Display (Facts) 
-        & 
-        Obtains the proper facts of 
-        the identified language from 
-        the Identifier subsystem 
-        and displays it to the user
-        & 
-        Repository \\ \hline
-        
-    \end{tabularx}
-    \caption{Architecture Table}
-    \label{tab:architecture_table}
+        \textbf{Subsystem} & \textbf{Purpose} & \textbf{Architectural Style} \\
+        \hline
+        \textbf{Reader} & Reads the input from the user and converts it into the proper file format for the Identifier subsystem & Pipe and Filter \\
+        \hline
+        \textbf{Identifier} & Identifies the language using the input from the Reader subsystem & Blackboard \\
+        \hline
+        \textbf{Display (Facts)} & Obtains the proper facts of the identified language from the Identifier subsystem and displays it to the user & Repository \\
+        \hline
+    \end{tabular}
+    \caption{Subsystems and their Architectural Styles}
+    \label{tab:subsystems}
 \end{table}
 
-As data enters the system (i.e., user input), the subsystems act as filters, transforming and transferring the data through pipes to the next subsystem. A Pipe and Filter architecture consists of a data source (user input), filters (subsystems), pipes (which transfer data between subsystems), and a data sink (output to the user).
-The data source pushes data only (i.e., write-only) to the Reader subsystem, which operates in a pull/push manner (i.e., read/write) by reading the input and sending it to the next subsystem, the Identifier. The Identifier subsystem also follows a pull/push model, reading data from the Reader subsystem and passing it to the Display subsystem. The Display subsystem, in turn, is pull-only (i.e., read-only), as it retrieves data from the Identifier subsystem to display the final output to the user.
-In this architecture, filters are passive, while pipes are active. For a more detailed explanation of the subsystems, refer to Section 3.2.
-
-% \begin{itemize}
-%     \item Identify and explain the overall architecture of your system – Cheukman
-%     \item Be sure to clearly state the name of the architecture you used (this is the name of the architectural pattern, not the name of your system) – Cheukman
-%     \item Provide the reasoning and justification of the choice of architecture – Cheukman 
-%     \item Provide a structural architecture diagram showing the relationship among the subsystems (if appropriate) – Gurman
-    
-% \end{itemize}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\linewidth]{Section3/architectural_diagramV2.png}
-	\caption{Architectural Diagram}
-	\label{ArchitecturalDiagram}
-\end{figure}
-
-\begin{itemize}
-    \item We considered Batch Sequential Architecture Style to transfer the data between different modules. However, using temporary files as connection between each module are not as efficient as Pipe and filter architecture which using data stream. The character of language could use ASCII table or UTF-8 to present. In this case, as long as the amount of data stream is not exceling pipe capacity, pipe could work more efficiently without waiting for temporary file from upstream.
-    \item Master- Slave Architecture are also considered, since the slave nodes could implement experts of identifying the input language. However, Master-Slave Architecture features on divide the huge or data set into parts and process each part of task in parallel. And identify language is not a task that could divided in parts and send to the slave nodes. 
-    \item We eliminate Model-View-Controller Architecture, through it have one data set that could store knowledge of different languages. However, the different view of displaying data is used for displaying what language we get instead of identifying languages. 
-\end{itemize}
-% End SubSection
+\noindent
+As data enters the system (i.e., user input), the subsystems act as filters, transforming and transferring the data through pipes to the next subsystem. A Pipe and Filter architecture consists of a data source (user input), filters (subsystems), pipes (which transfer data between subsystems), and a data sink (output to the user). The data source pushes data only (i.e., write-only) to the Reader subsystem, which operates in a pull/push manner (i.e., read/write) by reading the input and sending it to the next subsystem, the Identifier. The Identifier subsystem also follows a pull/push model, reading data from the Reader subsystem and passing it to the Display subsystem. The Display subsystem, in turn, is pull-only (i.e., read-only), as it retrieves data from the Identifier subsystem to display the final output to the user. In this architecture, filters are passive, while pipes are active. For a more detailed explanation of the subsystems, refer to Section 3.2. \\
 
 \subsection{Subsystems}
 \label{sub:subsystems}
