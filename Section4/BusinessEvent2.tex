@@ -2,7 +2,7 @@
 	\\ \textbf{Precondition}: User has input information that is distributable. User has allowed the app to access their phone storage
 	\begin{enumerate}[{\bf VP1.}]
 		\item Users
-		% \\ \textbf{Main Success Scenario:}
+		\\ \textbf{Main Success Scenario:}
 		\begin{enumerate}[{\bf 1.}]
 			\item User taps input button 
 			\item System prompts user for input by showing different inputs and directions for each type of valid input type
@@ -12,12 +12,26 @@
 			\item System checks the input for any input flaws before validation
 			\item System display message to user indicating the input has successfully uploaded
 		\end{enumerate}
+		\textcolor{red}{\textbf{Second Scenario:}}\\
+			\textcolor{red}{\textbf{6i}. User Fails to input the correct input type}\\
+				\textcolor{red}{\hspace{1em} \textbf{6i}.1 System displays the proper input types to the user }\\
+				\textcolor{red}{\hspace{1em} \textbf{6i}.2 User follows instructions and inputs the correct input (continue to step 5)}\\
+			\textcolor{red}{\textbf{6ii}. User is unable to input the correct input}\\
+				\textcolor{red}{\hspace{1em} \textbf{6ii}.1 System displays the proper input types to the user}\\
+				\textcolor{red}{\hspace{1em} \textbf{6ii}.2 User chooses “unable to input data type”}\\
+				\textcolor{red}{\hspace{1em} \textbf{6ii}.3 System directs user to customer support (see VP)}\\
 		\textbf{Post-Condition}: User has uploaded their input in the app
 		\item Admin – \textbf{N/A}
-		\item Linguistics Enthusiasts – \textbf{N/A}
-		\item Language Translator Company -\textbf{N/A}
+		\item \textcolor{red}{Customer Service}\\
+			\textcolor{red}{\textbf{6ii}.4 User sends message on directions on what to do next}\\
+			\textcolor{red}{\textbf{6ii}.5 Customer gives feedback on what to do next}\\
+			\textcolor{red}{\textbf{6ii}.6 Customer service sends report to Statics team}\\
+		\item \textcolor{red}{Statistics Team}\\
+			\textcolor{red}{\textbf{8}. System sent statistical data on the type of input uploaded}\\
+
 	\end{enumerate}
 	\textbf{Global Scenario}:
+	\\ \textbf{Main Success Scenario:}
 	\begin{enumerate}[{\bf 1.}]
 		\item User taps input button 
 		\item System prompts user for input by showing different inputs and directions for each type of valid input type
@@ -26,5 +40,19 @@
 		\item User follows the instructions and uploads the input correctly
 		\item System checks the input for any input flaws before validation
 		\item System display message to user indicating the input has successfully uploaded
+		\item \textcolor{red}{System sent statistical data on the type of input uploaded}\\
+
 	\end{enumerate}
+
+	\textbf{Secondary Scenario:}\\
+	\textcolor{red}{\textbf{6i}. User Fails to input the correct input type}\\
+	\textcolor{red}{\hspace{1em} \textbf{6i}.1 System displays the proper input types to the user }\\
+	\textcolor{red}{\hspace{1em} \textbf{6i}.2 User follows instructions and inputs the correct input (continue to step 5)}\\
+\textcolor{red}{\textbf{6ii}. User is unable to input the correct input}\\
+	\textcolor{red}{\hspace{1em} \textbf{6ii}.1 System displays the proper input types to the user}\\
+	\textcolor{red}{\hspace{1em} \textbf{6ii}.2 User chooses “unable to input data type”}\\
+	\textcolor{red}{\hspace{1em} \textbf{6ii}.3 System directs user to customer support (see VP)}\\
+	\textcolor{red}{\hspace{1em} \textbf{6ii}.4 User sends message on directions on what to do next}\\
+	\textcolor{red}{\hspace{1em} \textbf{6ii}.5 Customer gives feedback on what to do next}\\
+	\textcolor{red}{\hspace{1em} \textbf{6ii}.6 Customer service sends report to Statics team}\\
 	\textbf{Post-Condition}: User has uploaded their input in the app
