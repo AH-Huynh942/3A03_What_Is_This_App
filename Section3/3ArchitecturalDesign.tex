@@ -28,6 +28,13 @@ The overall architecture of our design follows the Pipe and Filter architecture.
 \noindent
 As data enters the system (i.e., user input), the subsystems act as filters, transforming and transferring the data through pipes to the next subsystem. A Pipe and Filter architecture consists of a data source (user input), filters (subsystems), pipes (which transfer data between subsystems), and a data sink (output to the user). The data source pushes data only (i.e., write-only) to the Reader subsystem, which operates in a pull/push manner (i.e., read/write) by reading the input and sending it to the next subsystem, the Identifier. The Identifier subsystem also follows a pull/push model, reading data from the Reader subsystem and passing it to the Display subsystem. The Display subsystem, in turn, is pull-only (i.e., read-only), as it retrieves data from the Identifier subsystem to display the final output to the user. In this architecture, filters are passive, while pipes are active. For a more detailed explanation of the subsystems, refer to Section 3.2. \\
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{Section3/architectural_diagramV2.png}
+	\caption{Architectural Diagram}
+	\label{Architectural    Diagram}
+\end{figure}
+
 \subsection{Subsystems}
 \label{sub:subsystems}
 % Begin SubSection
