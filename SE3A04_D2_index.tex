@@ -59,31 +59,23 @@
     segmentation style={solid, black!100},
     title=#1%
 }
-% \newcommand{\crc}{
-% \begin{cards}[]
-%     \textbf{Class Name:} SomeClassName
-%     % \medskip % Adds spacing
-%     % \noindent\rule{\linewidth}{0.4pt} % Full-width horizontal line
-%     % \medskip
-%     \tcbline
-%     \begin{tabular}{p{0.45\linewidth} | p{0.45\linewidth}}
-%         \textbf{Responsibility:}& 
-%         \textbf{Collaborator:}\\
-%         % \hline % Horizontal line inside the table
-%     \end{tabular}
-%     \tcbline
-%     \begin{tabular}{p{0.45\linewidth} | p{0.45\linewidth}}
-%         \begin{itemize}
-%             \item 
-%         \end{itemize}
-%         &
-%         \begin{itemize}
-%             \item 
-%         \end{itemize}
-%     \end{tabular}
-% \end{cards}
-% }
-
+\newtcolorbox{red_cards}[1][]{%
+    enhanced,breakable,
+    colframe=red,
+    colback=white,
+    arc=1mm,
+    outer arc=1mm,
+    % attach boxed title to top center={yshift=-4mm},
+    boxed title style={size=small,colback=black!10!white,boxsep=2.4mm,left=0mm,right=0mm},
+    coltitle=black!70!black,
+    fonttitle=\bfseries\large,    
+    boxsep=1mm,
+    left=0mm,
+    right=0mm,
+    before={\noindent},
+    segmentation style={solid, black!100},
+    title=#1%
+}
 %------------------------------------------------------------------------------
 
 % Document
