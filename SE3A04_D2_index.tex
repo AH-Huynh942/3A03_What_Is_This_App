@@ -18,9 +18,12 @@
 \usepackage{longtable}
 \usepackage{booktabs}
 \usepackage{float}
+\usepackage{tikz,lipsum,lmodern}
+\usepackage[most]{tcolorbox}
+\usepackage{tabularx}
 % \usepackage{biblatex}
-\usepackage[backend=biber,style=ieee]{biblatex} % Ensure 'style=ieee' is set
-\addbibresource{references.bib} % Add your bibliography file
+%\usepackage[backend=biber,style=ieee]{biblatex} % Ensure 'style=ieee' is set
+%\addbibresource{references.bib} % Add your bibliography file
 %------------------------------------------------------------------------------
 
 % Header and Footer
@@ -32,10 +35,47 @@
 
 % Title Details
 %------------------------------------------------------------------------------
-\title{Deliverable \#1: Software Requirement Specification (\textbf{SRS})}
+\title{Deliverable \#2: High-Level Architectural Design}
 \author{SE 3A04: Software Design II -- Large System Design}
 \date{}
-                            
+                      
+
+% BOX DEFINITION
+% -----------------------------------------------------------------------------
+\newtcolorbox{cards}[1][]{%
+    enhanced,breakable,
+    colframe=black,
+    colback=white,
+    arc=1mm,
+    outer arc=1mm,
+    % attach boxed title to top center={yshift=-4mm},
+    boxed title style={size=small,colback=black!10!white,boxsep=2.4mm,left=0mm,right=0mm},
+    coltitle=black!70!black,
+    fonttitle=\bfseries\large,    
+    boxsep=1mm,
+    left=0mm,
+    right=0mm,
+    before={\noindent},
+    segmentation style={solid, black!100},
+    title=#1%
+}
+\newtcolorbox{red_cards}[1][]{%
+    enhanced,breakable,
+    colframe=red,
+    colback=white,
+    arc=1mm,
+    outer arc=1mm,
+    % attach boxed title to top center={yshift=-4mm},
+    boxed title style={size=small,colback=black!10!white,boxsep=2.4mm,left=0mm,right=0mm},
+    coltitle=black!70!black,
+    fonttitle=\bfseries\large,    
+    boxsep=1mm,
+    left=0mm,
+    right=0mm,
+    before={\noindent},
+    segmentation style={solid, black!100},
+    title=#1%
+}
 %------------------------------------------------------------------------------
 
 % Document
@@ -47,11 +87,11 @@
 {\bf Group Number:} Group 5 \\
 {\bf Group Members:} 
 \begin{itemize}
-	\item Sarah Dorfman
-	\item Gurmanjot Minhas
-	\item Cheukman Zhou
-	\item Ke Ma
 	\item Andy Huynh (Leader)
+	\item Gurmanjot Minhas
+	\item Sarah Dorfman
+	\item Ke Ma
+	\item Cheukman Zhou
 \end{itemize}
 
 \newpage
@@ -61,22 +101,15 @@
 
 
 % SECTION 2
-\include{Section2/2OveralProductDescription}
+\include{Section2/2AnalysisClassDiagram}
 
 
 % SECTION 3
-\include{Section3/3UseCaseDiagram}
+\include{Section3/3ArchitecturalDesign}
 
 
 % SECTION 4
-\include{Section4/4FunctionRequirements}
-
-
-% SECTION 5
-\include{Section5/5NonFunctionRequirements}
-
-% SECTION 6
-\include{Section6/6InnovativeFeatures}
+\include{Section4/4ClassResponsibilityCards}
 
 
 % DIVISION OF LABOR
