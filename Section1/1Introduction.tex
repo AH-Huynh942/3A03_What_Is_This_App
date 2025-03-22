@@ -6,32 +6,24 @@
 \subsection{Purpose}
 \label{sub:purpose}
 % Begin SubSection
+This document offers greater insight into Languify’s system structure and the interactions between each of its components. These relationships are illustrated through a detailed class diagram, sequence diagrams for each business event, and state chart diagrams for each controller class.\newline
 
+
+\noindent This document is mainly aimed towards software developers, maintenance teams, and business stakeholders such as project managers, clients, and investors. The first two are concerned with understanding the internal design structure, ensuring it is straightforward to debug, and implement new features with minimal coupling. For a more high-level description of the internal structure, refer to deliverable 2. The rest are more interested in verifying a user-friendly control flow that meets the specifications from deliverable 1.
 % End SubSection
 
 
 \subsection{System description}
 \label{sub:system_description}
 % Begin SubSection
-
+The application is used to deduce what language some encoded script is written in. To achieve this, it uses a pipe and filter architecture involving three filter modules. The first is an input processor that converts images, PDFs, and general text inputs into a normalized UTF-8 plain text form. This is passed to the identifier service which uses insight from its three experts to interpret the language and transfer the deduction to the subsequent display system. Based on this, the display system transforms the result into a comprehensive output complete with fun facts, a map of frequent speakers, and popular words and phrases from that language. For a more detailed description of each of these subsystems or the overarching architecture, refer to deliverable 2. 
 % End SubSection
 
 
 \subsection{Overview}
 \label{sub:overview}
 % Begin SubSection
-
+The rest of the document extends upon the material described in deliverables 1 and 2 with relevant architectural diagrams. Section 2 provides state charts for each controller class described in the analysis class diagram from deliverable 2. Section 3 depicts sequence diagrams for each of the main use cases outlined in deliverable 1. Finally, Section 4 illustrates a detailed class diagram to understand the overall structure of the whole system.  
 % End SubSection
-
-
-% \subsection{References}
-% \label{sub:references}
-% Begin SubSection
-% \begin{itemize}
-% \printbibliography[heading=none]
-% \bibliographystyle{IEEEtran}
-% \bibliography{references}
-% End SubSection
-
 
 % End Section
