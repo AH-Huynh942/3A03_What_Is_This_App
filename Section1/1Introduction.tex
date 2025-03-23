@@ -13,7 +13,7 @@ This document offers greater insight into Languify’s system structure and the 
 % End SubSection
 
 
-\subsection{System description}
+\subsection{System Description}
 \label{sub:system_description}
 % Begin SubSection
 The application is used to deduce what language some encoded script is written in. To achieve this, it uses a pipe and filter architecture involving three filter modules. The first is an input processor that converts images, PDFs, and general text inputs into a normalized UTF-8 plain text form. This is passed to the identifier service which uses insight from its three experts to interpret the language and transfer the deduction to the subsequent display system. Based on this, the display system transforms the result into a comprehensive output complete with fun facts, a map of frequent speakers, and popular words and phrases from that language. For a more detailed description of each of these subsystems or the overarching architecture, refer to deliverable 2. 
